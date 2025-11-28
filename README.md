@@ -7,7 +7,7 @@
 
 - 第二步: 在cocos项目根目录安装依赖`npm install @aixh-cc/xhgame_ec_framework`
 
-- 第三步：将当前项目的放到`项目/extensions`下面,并也安装本插件的依赖`npm install`
+- 第三步：将当前【插件】的放到`项目/extensions`下面,并也安装本插件的依赖`npm install`
 
 - 第四步：`npm run dev:node` 启动后端服务
 

@@ -1,15 +1,51 @@
-# Vue 3 + Vite
+# xhgame的cocos在线构建器
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 使用说明
+- 第一步: 创建一个新项目，项目->项目设置->长宽640,960
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+- 第二步: 在项目根目录安装依赖npm install @aixh-cc/xhgame_ec_framework
 
-## setup
+- 第三步： 选择插件“xhgame游戏在线构建器”,安装最开始的“框架模板库”，这里可以根据你要开发的选择，比如你想开发2d，就选择2d的基础框架，如果是3d的就选择3d的基础框架（注：2d的基础框架暂未对接上线）
 
-```bash
-npm install
+- 第四步： 选择你这个游戏所用到的单位有哪些。当前共有6种单位模板可供选择：
 
-npm run dev
+   - 1、uiItem 普通的ui单位
+   - 2、effectItem 特效item
+   - 3、tiledItem 地板单位
+   - 4、textUiItem 漂浮字item
+   - 5、unitItem 游戏单位
+   - 6、unitUiItem 单位跟随的ui（一般是血条）
 
-npm run build
-```
+- 第五步： 安装上所需的资源（【注意】，因编辑器原因，安装后，需要随便切出编辑器，再进来就能看到资源已安装）
+
+## 当前组件
+
+- 会话，新手引导组件
+
+- 微信抖音小程序功能
+
+- 3d农场资源
+
+- 虚拟列表（暂未上线）
+
+## 特点：
+
+- 1、一套游戏玩法+在线组件库 = 2d + 3d 两个游戏
+- 2、高度自定义框架，在构建时可以自定义替换所用manager
+- 3、一键式安装资源，你想使用某3d单位获取地图资源，只需记住资源code, 然后让“工厂”帮你生成。
+- 4、底层构建开源，ec框架开源，收费是作者的组件与构建器页面。
+- 5、面向ai编程的框架，通过ai调用bunjs进行开发调试。
+
+## web页面的二次开发
+在插件页面安装依赖 npm i 之后启动服务
+
+npm run dev:node 启动后端服务 npm run dev 启动网页
+
+npm run build 打包成cocos的插件dist包
+
+npm run build:web 打包成网页（后期如果组件都在线上安装可能会用到）
+
+npm run build:node 后端服务打包（一般用不上）
+
+## 体验
+如果你不想使用构建器构建一步步构建，可以直接使用开源的框架demo 地址：https://github.com/aixh-cc/xhgame_demo

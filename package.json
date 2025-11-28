@@ -1,5 +1,5 @@
 {
-    "name": "xhgame_plugin",
+    "name": "xhgame_builder_for_cocos",
     "version": "1.2.0",
     "package_version": 2,
     "type": "module",
@@ -56,8 +56,8 @@
             }
         },
         "menu": [{
-            "path": "i18n:menu.panel/xhgame_plugin",
-            "label": "i18n:xhgame_plugin.title",
+            "path": "i18n:menu.panel/xhgame_builder_for_cocos",
+            "label": "i18n:xhgame_builder_for_cocos.title",
             "message": "open"
         }],
         "messages": {

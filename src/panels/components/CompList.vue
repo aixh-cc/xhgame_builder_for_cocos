@@ -87,7 +87,7 @@ async function handleInstallClick(component: IComponentInfoWithStatus) {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  plugin: 'xhgame_plugin',
+  plugin: 'xhgame_builder_for_cocos',
   group: 'components',
   title: '组件库' 
 });
@@ -157,7 +157,7 @@ async function installComponent(component: IComponentInfoWithStatus) {
   if(component.isInstalled){
     return 
   }
-  console.log(`[xhgame_plugin] 安装【本地组件】请求:`, component.componentCode);
+  console.log(`[xhgame_builder_for_cocos] 安装【本地组件】请求:`, component.componentCode);
   try {
     // 确认安装
     const confirmMessage = `确定要从插件内置资源安装 "${component.componentCode}" 组件到项目吗？`;
@@ -227,7 +227,7 @@ function cancelUninstall() {
 async function confirmUninstallComponent() {
   if (!currentUninstallComponent.value) return;
   const { componentCode, componentName } = currentUninstallComponent.value;
-  console.log(`[xhgame_plugin] 卸载【本地组件】请求:`, currentUninstallComponent.value);
+  console.log(`[xhgame_builder_for_cocos] 卸载【本地组件】请求:`, currentUninstallComponent.value);
   try {
     uninstallingComponents.value.add(componentCode);
     uninstallDialogVisible.value = false;

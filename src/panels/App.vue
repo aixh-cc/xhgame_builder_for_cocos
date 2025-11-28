@@ -11,7 +11,7 @@ const message = inject(keyMessage)!;
 
 // 当前激活的标签页
 const activeTab = ref('local');
-const curPlugin = ref('xhgame_plugin');
+const curPlugin = ref('xhgame_builder_for_cocos');
 
 async function showVersion() {
     try {
@@ -24,8 +24,8 @@ async function showVersion() {
 }
 const  options = ref([
           {
-            value: 'xhgame_plugin',
-            label: 'xhgame_plugin(本地)',
+            value: 'xhgame_builder_for_cocos',
+            label: 'xhgame_builder_for_cocos(本地)',
           },
           {
             value: 'tp-for-editor',

@@ -21,17 +21,17 @@ class CocosEditorBridge {
     }
 
     async getVersion(): Promise<{ success: boolean, version: string }> {
-        return this.requestMessage('xhgame_plugin', 'get-version');
+        return this.requestMessage('xhgame_builder_for_cocos', 'get-version');
     }
     async getPackages(plugin: string, group: string): Promise<IGetGroupComponentListRes> {
-        return this.requestMessage('xhgame_plugin', 'get-packages', { group, plugin });
+        return this.requestMessage('xhgame_builder_for_cocos', 'get-packages', { group, plugin });
     }
     async installComponent(plugin: string, group: string, componentCode: string): Promise<IInstallRes> {
-        return this.requestMessage('xhgame_plugin', 'install-component', { group, plugin, componentCode });
+        return this.requestMessage('xhgame_builder_for_cocos', 'install-component', { group, plugin, componentCode });
     }
     async uninstallComponent(plugin: string, group: string, componentCode: string): Promise<IUninstallRes> {
         try {
-            const result = await this.requestMessage('xhgame_plugin', 'uninstall-component', { group, plugin, componentCode });
+            const result = await this.requestMessage('xhgame_builder_for_cocos', 'uninstall-component', { group, plugin, componentCode });
             console.log(`🎮 [CocosEditorBridge] Uninstalled component:`, result);
             return result;
         } catch (error) {
@@ -41,7 +41,7 @@ class CocosEditorBridge {
     }
     async rollbackComponent(param: { componentCode: string, group: string }): Promise<any> {
         try {
-            const result = await this.requestMessage('xhgame_plugin', 'rollback-component', param);
+            const result = await this.requestMessage('xhgame_builder_for_cocos', 'rollback-component', param);
             return result;
         } catch (error) {
             throw error;

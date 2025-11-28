@@ -14,7 +14,7 @@
         "preview-web": "vite preview --config vite.config.web.ts --outDir dist/web"
     },
     "dependencies": {
-        "@aixh-cc/xhgame_builder": "^0.0.1",
+        "@aixh-cc/xhgame_builder": "^1.2.0",
         "adm-zip": "^0.5.16",
         "archiver": "^5.3.1",
         "cors": "^2.8.5",
